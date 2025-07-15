@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>3 Column Layout</title>
+      <link rel="stylesheet" href="output.css">
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+   </head>
+   <body class="h-screen bg-[var(--backGround)] text-white flex justify-center">
+      <!-- Left Sidebar -->
+      <div class=" p-6 flex flex-col bg-[var(--backGround)] overflow-y-auto w-[72px] md:w-[259px] ">
+         <div class=" flex flex-col ml-auto  gap-7">
+            <img src="logo.png" alt="LogoImage" class="w-[50px] h-auto object-contain rounded-full">
+            <ul class="flex flex-col gap-7">
+               <li class="flex items-center gap-2 font-medium  text-[var(--textColor)] hover:text-[var(--textHover)]">
+                  <span class="material-symbols-outlined">home</span> Home
+               </li>
+               <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
+                  <span class="material-symbols-outlined">search</span> Search
+               </li>
+               <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
+                  <span class="material-symbols-outlined">circle_notifications</span> Notifications
+               </li>
+               <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
+                  <span class="material-symbols-outlined">chat_bubble</span> Messages
+               </li>
+               <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
+                  <span class="material-symbols-outlined">adjust</span> AI
+               </li>
+               <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
+                  <span class="material-symbols-outlined">group</span> Communities
+               </li>
+               <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
+                  <span class="material-symbols-outlined">person_4</span> Profile
+               </li>
+               <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
+                  <span class="material-symbols-outlined">more_horiz</span> More
+               </li>
+            </ul>
+            <button class="border-2 border-[var(--borderLight)] rounded-full cursor-pointer hover:bg-[var(--buttonBg)] hover:text-black w-auto h-auto p-2 
+               transition duration-300 ease-in-out
+               ">Post</button>
+            <div class="flex gap-2">
+               <img src="logo.png" alt="Avatar" class="h-10 w-10 rounded-full object-cover">
+               <div class="flex flex-col">
+                  <p class="font-bold text-sm">Shubh</p>
+                  <p class="font-extralight text-sm">shubhgoel2002@gmail.com</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Main Content -->
+      <div class="w-full  max-w-[600px] bg-[var(--backGround)] overflow-y-auto border-x-2 border-[var(--borderLight)] your-container">
+         <div id="navbar" class="flex py-3 px-4 w-full max-w-[590px] fixed bg-[var(--backGround)]/40 backdrop-blur-md top-0 z-10">
+            <button class="w-full h-auto  hover:bg-sky-700 text-sm font-light cursor-pointer">For You</button>
+            <button class="w-full h-auto  hover:bg-sky-700 text-sm font-light cursor-pointer">Following</button>
+         </div>
+         <form class="flex flex-col gap-3 bg-[var(--backGround)] border-2 border-[var(--borderLight)] w-full px-4 mt-[50px]">
+            <div class="flex gap-3">
+               <div>
+                  <img src="logo.png" alt="Avatar" class="h-10 w-10 rounded-full object-cover">
+               </div>
+               <textarea
+                  class="flex-1 text-white resize-none w-full mt-1 p-1"
+                  placeholder="What's happening?"
+                  oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px';"
+                  ></textarea>
+            </div>
+            <hr class="border-2 border-[var(--borderLight)]">
+            <!-- Footer: Icons + Post Button -->
+            <div class=" w-full px-2 flex justify-between items-center ">
+               <!-- Icons -->
+               <div class="flex gap-4">
+                  <button class="hover:text-blue-500 text-white cursor-pointer"><span class="material-symbols-outlined">image</span></button>
+                  <button class="hover:text-blue-500 text-white cursor-pointer"><span class="material-symbols-outlined font-light">gif_box</span></button>
+                  <button class="hover:text-blue-500 text-white cursor-pointer"><span class="material-symbols-outlined">bar_chart</span></button>
+                  <button class="hover:text-blue-500 text-white cursor-pointer"><span class="material-symbols-outlined">mood</span></button>
+                  <button class="hover:text-blue-500 text-white cursor-pointer"><span class="material-symbols-outlined">schedule</span></button>
+                  <button class="hover:text-blue-500 text-white cursor-pointer"><span class="material-symbols-outlined">location_on</span></button>
+               </div>
+               <!-- Post Button -->
+               <button class="text-white hover:text-blue-500 cursor-pointer">Post</button>
+            </div>
+         </form>
+         <div class="flex flex-col gap-3 p-4 bg-[var(--backGround)] border-[var(--borderLight)] w-full border-t-2 border-b-2">
+            <!-- Top: Profile Section -->
+            <div class="flex justify-between w-full md:w-1/2">
+               <div class="profile flex gap-3">
+                  <img src="logo.png" alt="Avatar" class="h-10 w-10 rounded-full object-cover">
+                  <div>
+                     <h3 class="text-white font-semibold">Dev</h3>
+                     <p class="text-gray-400 text-sm">@refocus21 · 38m</p>
+                  </div>
+               </div>
+               <button class="h-auto w-auto p-2 border-2 border-[var(--borderLight)] rounded-full text-white cursor-pointer
+                  hover:bg-[var(--buttonBg)] hover:text-black 
+                  transition duration-300 ease-in-out">
+               Follow
+               </button>  
+            </div>
+            <!-- Middle: Message Section -->
+            <div class="text-white">
+               Regardless of the result this inning of Ravindra Jadeja will be remembered for ages 🤯
+            </div>
+            <!-- Media Section -->
+            <div class="rounded-lg overflow-hidden">
+               <video controls class="w-full rounded-lg">
+                  <source src="your-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+               </video>
+               <!-- Or use an image: -->
+               <!-- <img src="your-image.jpg" class="w-full rounded-lg" alt="Post Media"> -->
+            </div>
+            <hr class="border-t border-[var(--borderLight)]">
+            <!-- Footer: Icons -->
+            <div class="flex justify-between items-center text-gray-400 text-sm">
+               <div class="flex gap-6">
+                  <div class="flex gap-1">
+                     <button class="text-white cursor-pointer"><span class="material-symbols-outlined">mode_comment</span></button>
+                     <p>34k</p>
+                  </div>
+                  <div class="flex gap-1">
+                     <button class="text-white cursor-pointer"><span class="material-symbols-outlined">favorite</span></button>
+                     <p>34k</p>
+                  </div>
+                  <button class="text-white cursor-pointer"><span class="material-symbols-outlined">forward</span></button>
+               </div>
+               <div class="hover:text-blue-500">⋯</div>
+            </div>
+            <!-- Description Section -->
+            <div class="text-gray-400 text-sm w-full h-10 overflow-hidden text-ellipsis whitespace-nowrap">
+               necessitatibus unde assumenda, quo quas. Quam voluptas dolorem repudiandae earum et molestiae explicabo dolor excepturi Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro itaque aliquam blanditiis deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis necessitatibus, sapiente veritatis eveniet, quia quos nam maxime aspernatur esse consequatur quas! Consequatur illum provident, facere numquam quis quaerat iusto labore a saepe pariatur! Ratione tempore quaerat similique ex quidem, corrupti sapiente vel temporibus eaque amet. Doloremque velit vitae, nisi quia ex, ipsa porro reprehenderit repellat a modi ratione rem alias, dolor vero quaerat minus inventore. Quae error nam nihil natus unde similique, maxime repellat eos necessitatibus voluptas aut! Sapiente quae eum iste sint quas laudantium laborum quam accusamus ducimus tempora explicabo obcaecati quos cupiditate accusantium porro quidem ex temporibus autem, ullam ipsa. Nam, ullam commodi vero est veritatis sed nesciunt a labore exercitationem molestiae ab esse sapiente fugit dignissimos accusamus quibusdam autem. Quod nostrum unde inventore repudiandae maiores quo rerum vero molestias, dolores non provident debitis facilis dolore sequi est, libero praesentium, totam iusto optio. Vero reprehenderit at rerum consectetur deserunt, vitae error explicabo consequuntur, dignissimos nulla asperiores assumenda quibusdam quod! Dicta deleniti sequi rerum excepturi architecto autem veritatis laborum repellendus labore saepe ex quaerat, dignissimos inventore facilis aut ratione, odio ullam eum. Rerum modi, fugit dolore cum error numquam obcaecati alias ratione voluptatem? Officiis beatae nulla ex consectetur deleniti sapiente nesciunt repudiandae harum porro! Voluptate dolorem, quam dicta aliquam hic velit omnis nesciunt blanditiis voluptas incidunt at doloribus facere, pariatur in! Similique vel voluptates quam libero itaque incidunt alias odio, assumenda consequuntur earum fugiat aspernatur, nostrum non at optio ratione consequatur voluptate praesentium facilis facere. Error saepe asperiores exercitationem eaque distinctio aliquid blanditiis magnam recusandae ullam, iure excepturi vitae, aspernatur fuga rerum quaerat laboriosam repellendus maiores, quas amet quia architecto sapiente eveniet consequuntur. Quas porro quae possimus accusantium. Sint vel incidunt unde molestias libero architecto aperiam quos sapiente officiis, numquam veniam a rem amet impedit delectus enim alias atque.
+            </div>
+         </div>
+      </div>
+      <!-- Right Sidebar -->
+      <div class="hidden xl:flex w-[350px] flex-col gap-4 p-4 bg-black text-white">
+         <!-- Search Bar -->
+         <input type="text" class="w-full border-2 h-[30px] rounded-full p-2" placeholder="Search...">
+         <!-- What's Trending Section -->
+         <div class="flex flex-col gap-3">
+            <h2 class="text-lg font-bold">What's Trending</h2>
+            <!-- Trending Item -->
+            <div class="flex justify-between items-center p-2 rounded-lg bg-gray-900 hover:bg-gray-800r">
+               <div>
+                  <p class="font-medium">#OpenAI</p>
+                  <p class="text-sm text-gray-400">15.2K impressions</p>
+               </div>
+               <button 
+                  class="text-sm text-amber-400 hover:text-amber-500 cursor-pointer" 
+                  onclick="openCommentBox('#OpenAI')">
+               Add
+               </button>
+            </div>
+            <!-- Repeat trending items -->
+            <div class="flex justify-between items-center p-2 rounded-lg bg-gray-900 hover:bg-gray-800">
+               <div>
+                  <p class="font-medium">#TailwindCSS</p>
+                  <p class="text-sm text-gray-400">8.7K impressions</p>
+               </div>
+               <button 
+                  class="text-sm text-amber-400 hover:text-amber-500 cursor-pointer" 
+                  onclick="openCommentBox('#TailwindCSS')">
+               Add
+               </button>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
