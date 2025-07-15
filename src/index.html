@@ -9,65 +9,66 @@
    </head>
    <body class="h-screen bg-[var(--backGround)] text-white flex justify-center">
       <!-- Left Sidebar -->
-      <div class=" p-6 flex flex-col bg-[var(--backGround)] overflow-y-auto w-[72px] md:w-[259px] ">
-         <div class=" flex flex-col ml-auto  gap-7">
+      <div class=" p-6 flex flex-col bg-[var(--backGround)] overflow-y-auto overflow-x-hidden w-[72px] md:w-[220px] items-center">
+         <div class=" w-full h-auto flex flex-col gap-7 items-center md:items-start">
             <img src="logo.png" alt="LogoImage" class="w-12 h-12 object-contain rounded-full">
-            <ul class="flex flex-col gap-7">
+            <ul class="flex flex-col gap-7 items-center md:items-start">
                <li class="flex items-center gap-2 font-medium  text-[var(--textColor)] hover:text-[var(--textHover)]">
-                  <span class="material-symbols-outlined">home</span> Home
+                  <span class="material-symbols-outlined">home</span> <span class="hidden md:block">Home</span>
                </li>
                <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
-                  <span class="material-symbols-outlined">search</span> Search
+                  <span class="material-symbols-outlined">search</span> <span class="hidden md:block">Search</span>
                </li>
                <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
-                  <span class="material-symbols-outlined">circle_notifications</span> Notifications
+                  <span class="material-symbols-outlined">circle_notifications</span> <span class="hidden md:block">Requests</span>
                </li>
                <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
-                  <span class="material-symbols-outlined">chat_bubble</span> Messages
+                  <span class="material-symbols-outlined">chat_bubble</span> <span class="hidden md:block">Messages</span>
                </li>
                <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
-                  <span class="material-symbols-outlined">adjust</span> AI
+                  <span class="material-symbols-outlined">adjust</span> <span class="hidden md:block">AI</span>
                </li>
                <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
-                  <span class="material-symbols-outlined">group</span> Communities
+                  <span class="material-symbols-outlined">group</span> <span class="hidden md:block">Communities</span>
                </li>
                <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
-                  <span class="material-symbols-outlined">person_4</span> Profile
+                  <span class="material-symbols-outlined">person_4</span> <span class="hidden md:block">Profile</span>
                </li>
                <li class="flex items-center gap-2 font-medium text-[var(--textColor)] hover:text-[var(--textHover)]">
-                  <span class="material-symbols-outlined">more_horiz</span> More
+                  <span class="material-symbols-outlined">more_horiz</span> <span class="hidden md:block">More</span>
                </li>
             </ul>
-            <button class="border-2 border-[var(--borderLight)] rounded-full cursor-pointer hover:bg-[var(--buttonBg)] hover:text-black w-auto h-auto p-2 
+            <button class="border border-[var(--borderLight)] rounded-full cursor-pointer hover:bg-[var(--buttonBg)] hover:text-black
+                md:h-auto p-2 h-auto md:w-[150px]
                transition duration-300 ease-in-out
                ">Post</button>
-            <div class="flex gap-2">
-               <img src="logo.png" alt="Avatar" class="h-12 w-12 rounded-full object-cover">
-               <div class="flex flex-col">
+            <div class="hidden md:flex gap-2 w-full">
+               <img src="person1.jpeg" alt="Avatar" class="h-12 w-12 rounded-full object-cover">
+               <div class="flex flex-col overflow-auto your-container">
                   <p class="font-bold text-sm">Shubh</p>
-                  <p class="font-extralight text-sm">shubhgoel2002@gmail.com</p>
+                  <p class="font-extralight text-sm z-10">shubhgoel2002@gmail.com</p>
                </div>
             </div>
          </div>
       </div>
       <!-- Main Content -->
-      <div class="w-full  max-w-[600px] bg-[var(--backGround)] overflow-y-auto border-x-2 border-[var(--borderLight)] your-container">
+      <div class="w-full  max-w-[600px] bg-[var(--backGround)] overflow-y-auto border-x border-[var(--borderLight)] your-container">
          <div id="navbar" class="flex py-3 px-4 w-full max-w-[590px] fixed bg-[var(--backGround)]/40 backdrop-blur-md top-0 z-10">
             <button class="w-full h-auto  hover:bg-sky-700 text-sm font-light cursor-pointer">For You</button>
             <button class="w-full h-auto  hover:bg-sky-700 text-sm font-light cursor-pointer">Following</button>
          </div>
-         <form class="flex flex-col gap-3 bg-[var(--backGround)] border-2 border-[var(--borderLight)] w-full px-4 mt-[50px]">
+         <form class="flex flex-col gap-3 bg-[var(--backGround)] border border-[var(--borderLight)] w-full px-4 mt-[50px]">
             <div class="flex gap-3">
                <div>
-                  <img src="logo.png" alt="Avatar" class="h-12 w-12 rounded-full object-cover">
+                  <img src="person1.jpeg" alt="Avatar" class="h-12 w-12 rounded-full object-cover mt-1">
                </div>
                <textarea
-                  class="flex-1 text-white resize-none w-full mt-1 p-1"
-                  placeholder="What's happening?"
+                  class="flex-1 text-white resize-none w-full mt-1 p-1 outline-none active:border-none"
+                  placeholder="Post Your Vibe..."
                   oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px';"
                   ></textarea>
             </div>
-            <hr class="border-2 border-[var(--borderLight)]">
+            <hr class="border border-[var(--borderLight)]">
             <!-- Footer: Icons + Post Button -->
             <div class=" w-full px-2 flex justify-between items-center ">
                <!-- Icons -->
@@ -83,17 +84,17 @@
                <button class="text-white hover:text-blue-500 cursor-pointer">Post</button>
             </div>
          </form>
-         <div class="flex flex-col gap-3 p-4 bg-[var(--backGround)] border-[var(--borderLight)] w-full border-t-2 border-b-2">
+         <div class="flex flex-col gap-3 p-4 bg-[var(--backGround)] border-[var(--borderLight)] w-full border-t border-b h-auto">
             <!-- Top: Profile Section -->
             <div class="flex justify-between w-full md:w-1/2">
                <div class="profile flex gap-3">
-                  <img src="logo.png" alt="Avatar" class="h-12 w-12   rounded-full object-cover">
+                  <img src="person2.jpeg" alt="Avatar" class="h-12 w-12   rounded-full object-cover">
                   <div>
                      <h3 class="text-white font-semibold">Dev</h3>
                      <p class="text-gray-400 text-sm">@refocus21 · 38m</p>
                   </div>
                </div>
-               <button class="h-auto w-auto p-2 border-2 border-[var(--borderLight)] rounded-full text-white cursor-pointer
+               <button class="h-auto w-auto p-2 border border-[var(--borderLight)] rounded-full text-white cursor-pointer
                   hover:bg-[var(--buttonBg)] hover:text-black 
                   transition duration-300 ease-in-out">
                Follow
@@ -101,17 +102,16 @@
             </div>
             <!-- Middle: Message Section -->
             <div class="text-white">
-               Regardless of the result this inning of Ravindra Jadeja will be remembered for ages 🤯
+               ✨ A fresh horizon for your ideas, dive in and share your light.
             </div>
             <!-- Media Section -->
-            <div class="rounded-lg overflow-hidden">
-               <video controls class="w-full rounded-lg">
-                  <source src="your-video.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-               </video>
-               <!-- Or use an image: -->
-               <!-- <img src="your-image.jpg" class="w-full rounded-lg" alt="Post Media"> -->
-            </div>
+            <div class="rounded-lg overflow-hidden flex justify-center items-center bg-black max-h-[80vh]">
+  <img
+    src="scenery.jpg"
+    alt="Post Media"
+    class="w-full h-full object-contain"
+  />
+</div>
             <hr class="border-t border-[var(--borderLight)]">
             <!-- Footer: Icons -->
             <div class="flex justify-between items-center text-gray-400 text-sm">
@@ -130,14 +130,14 @@
             </div>
             <!-- Description Section -->
             <div class="text-gray-400 text-sm w-full h-10 overflow-hidden text-ellipsis whitespace-nowrap">
-               necessitatibus unde assumenda, quo quas. Quam voluptas dolorem repudiandae earum et molestiae explicabo dolor excepturi Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro itaque aliquam blanditiis deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis necessitatibus, sapiente veritatis eveniet, quia quos nam maxime aspernatur esse consequatur quas! Consequatur illum provident, facere numquam quis quaerat iusto labore a saepe pariatur! Ratione tempore quaerat similique ex quidem, corrupti sapiente vel temporibus eaque amet. Doloremque velit vitae, nisi quia ex, ipsa porro reprehenderit repellat a modi ratione rem alias, dolor vero quaerat minus inventore. Quae error nam nihil natus unde similique, maxime repellat eos necessitatibus voluptas aut! Sapiente quae eum iste sint quas laudantium laborum quam accusamus ducimus tempora explicabo obcaecati quos cupiditate accusantium porro quidem ex temporibus autem, ullam ipsa. Nam, ullam commodi vero est veritatis sed nesciunt a labore exercitationem molestiae ab esse sapiente fugit dignissimos accusamus quibusdam autem. Quod nostrum unde inventore repudiandae maiores quo rerum vero molestias, dolores non provident debitis facilis dolore sequi est, libero praesentium, totam iusto optio. Vero reprehenderit at rerum consectetur deserunt, vitae error explicabo consequuntur, dignissimos nulla asperiores assumenda quibusdam quod! Dicta deleniti sequi rerum excepturi architecto autem veritatis laborum repellendus labore saepe ex quaerat, dignissimos inventore facilis aut ratione, odio ullam eum. Rerum modi, fugit dolore cum error numquam obcaecati alias ratione voluptatem? Officiis beatae nulla ex consectetur deleniti sapiente nesciunt repudiandae harum porro! Voluptate dolorem, quam dicta aliquam hic velit omnis nesciunt blanditiis voluptas incidunt at doloribus facere, pariatur in! Similique vel voluptates quam libero itaque incidunt alias odio, assumenda consequuntur earum fugiat aspernatur, nostrum non at optio ratione consequatur voluptate praesentium facilis facere. Error saepe asperiores exercitationem eaque distinctio aliquid blanditiis magnam recusandae ullam, iure excepturi vitae, aspernatur fuga rerum quaerat laboriosam repellendus maiores, quas amet quia architecto sapiente eveniet consequuntur. Quas porro quae possimus accusantium. Sint vel incidunt unde molestias libero architecto aperiam quos sapiente officiis, numquam veniam a rem amet impedit delectus enim alias atque.
+               A new sunrise paints the lake with golden light, reminding us that every day brings fresh possibilities. Let calm waters and rising sun reflect the quiet strength within you.
             </div>
          </div>
       </div>
       <!-- Right Sidebar -->
-      <div class="hidden xl:flex w-[350px] flex-col gap-4 p-4 bg-black text-white">
+      <div class="hidden md:flex w-[350px] flex-col gap-4 p-4 bg-black text-white">
          <!-- Search Bar -->
-         <input type="text" class="w-full border-2 h-[30px] rounded-full p-2" placeholder="Search...">
+         <input type="text" class="w-full border h-[30px] rounded-full p-2" placeholder="Search...">
          <!-- What's Trending Section -->
          <div class="flex flex-col gap-3">
             <h2 class="text-lg font-bold">What's Trending</h2>
